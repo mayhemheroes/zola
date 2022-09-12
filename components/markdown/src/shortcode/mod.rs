@@ -4,7 +4,10 @@ use errors::{Error, Result};
 use libs::tera;
 use utils::templates::{ShortcodeDefinition, ShortcodeFileType};
 
+#[cfg(not(fuzzing))]
 mod parser;
+#[cfg(fuzzing)]
+pub mod parser;
 
 pub(crate) use parser::{parse_for_shortcodes, Shortcode, SHORTCODE_PLACEHOLDER};
 
