@@ -1,0 +1,7 @@
+project: zola
+target: shortcodes
+
+cmds:
+  - cmd: /shortcodes
+  - cmd: /shortcodes_no_inst @@
+    libfuzzer: false
