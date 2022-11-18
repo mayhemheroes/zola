@@ -11,6 +11,9 @@ use crate::markdown::markdown_to_html;
 pub use crate::markdown::Rendered;
 pub use context::RenderContext;
 
+#[cfg(fuzzing)]
+pub use shortcode::parser::parse_for_shortcodes;
+
 pub fn render_content(content: &str, context: &RenderContext) -> Result<markdown::Rendered> {
     // avoid parsing the content if needed
     if !content.contains("{{") && !content.contains("{%") {
