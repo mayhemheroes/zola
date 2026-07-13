@@ -1,0 +1,6 @@
+project: zola
+target: shortcodes
+
+cmds:
+  - cmd: /mayhem/shortcodes
+    libfuzzer: true
